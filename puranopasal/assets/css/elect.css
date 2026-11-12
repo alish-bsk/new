@@ -1,0 +1,99 @@
+.divel{
+    background-color: #f8f6f6; 
+    margin-left: -5px;
+    margin-top:55px;
+    width: 1200px;
+    height: 1464px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    
+
+}
+.el-lists {
+    position: absolute;
+    background-color: rgb(251, 251, 249); 
+    margin-left: 25px;
+    margin-top: 25px;
+    width: 200px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-style: groove;
+    display: flex;
+    flex-direction: column;  /* Align items vertically */
+    height: auto; 
+}
+
+.el-lists a {
+    display: flex;
+    align-items: center;      
+    color: rgb(0, 0, 0);     
+    font-size: 20px;
+    padding: 15px 50px;          
+    text-decoration: none;              
+}
+
+
+
+
+
+.search-elbar{
+    position: absolute;
+    padding: 10px 45px;
+    border: 1px solid #ccc;
+    border-radius: 20px; 
+    width: 105px; 
+    outline: none;
+}
+
+
+.search-elcant{
+    display: inline;
+    align-items: center;
+    position: absolute;
+    padding-left:285px;
+    padding-top:25px;
+
+
+}
+
+.search-elbutton {
+    
+    position: absolute;
+    padding-left:175px;
+    padding-top:11px;
+    height:0px;
+    width: 0px;
+    border: none;
+    background-color: rgba(251, 251, 249, 0.148); 
+    color: rgb(12, 12, 12);
+    border-radius: 0 20px 20px 0; 
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+
+}
+.el-new{
+    position: absolute;
+    margin-left:530px;
+    margin-top:8px;
+    background-color: black;
+    color:white;
+    border-radius: 5px;
+
+}
+.el-asc{
+    position: absolute;
+    margin-left:620px;
+    margin-top:8px;
+    width:125px;
+    border-radius: 5px;
+
+}
+.el-dsc{
+    position: absolute;
+    margin-left:780px;
+    margin-top:8px;
+    width:125px;
+    border-radius: 5px;
+
+}
+
+

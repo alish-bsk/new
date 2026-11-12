@@ -1,0 +1,189 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>puranopasal - Sign Up</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet" href="{% static 'css/divhomes10.css' %}">
+    <link rel="stylesheet" href="{% static 'css/signup02.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+</head>
+
+<body class="bdy-bck">
+    <header class="main-header">
+
+ <nav class="navbar navbar-expand-lg fixed-top  z-3  navbar-top">
+  <div class="container-fluid">
+
+
+    
+        <img class="rounded ms-3 mt-2 img-nav" src="{% static 'image/next.png' %}" alt="puranopasal Logo">
+        <!---p class="h1 m-auto fst-italic fw-bold   text-warning ">PuranoPasal</p-->
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+
+        
+    <div class="collapse navbar-collapse " id="navbarTogglerDemo01">
+
+      <ul class="navbar-nav ms-auto me-3 mb-2 mb-lg-0 text-center">
+        <li class="nav-item me-5 nav-itemall ">
+          <a href="{% url 'home' %}" class="nav-link fst-normal active fw-bold fs-5 text-white navbar-a " aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item me-5 nav-itemall  ">
+                  <a href="{% url 'elect' %}"  class="nav-link fst-normal fw-bold text-white fs-5 navbar-a " href="#">Electronics</a>
+
+        </li>
+        <li class="nav-item me-5 nav-itemall">
+        <form id="searchForm" action="{% url 'elect' %}" class="d-flex justify-content-center ms-5"  method="post"  enctype="multipart/form-data">
+                    {% csrf_token %}
+
+        <input type="text" name="search-data" class="form-control fst-normal     border-warning rounded-start-5 rounded-emd-0   search-input"  placeholder="Search" aria-label="Search"/>
+        <button type="submit"  class="btn  bg-white    rounded-start-0 rounded-end-circle btn-search " name="search" value="search" ><i class="fas fa-search"></i></button>
+      </form>
+        </li>
+    {% if request.session.phonenumber == None %}
+
+        <li class="nav-item me-5  nav-itemall">
+        <a href="{% url 'signin' %}" class=" nav-link w-5 h-5 ms-5  fst-normal bg-white  broder-5 rounded-3 border-warning fw-bold  btnall-login  " > <i class="fas fa-user-circle"></i> SignIn</a>
+        </li>
+
+        <li class="nav-item me-5 nav-itemall ">
+        <a href="{% url 'signup' %}" class="nav-link w-5 h-5 ms-5 fst-normal bg-white  broder-5 rounded-3 border-warning fw-bold btnall-login "> <i class="fas fa-sign-out-alt"></i> Signup</a>
+        </li>
+    {% else %}
+        <li class="nav-item me-5 nav-itemall">
+        <a href="{% url 'signin' %}" class=" nav-link w-5 h-5 ms-5   fst-normal bg-white  broder-5 rounded-3 border-warning fw-bold  btnall-login  " > <i class="fas fa-user-circle"></i> {{name.first_name}}</a>
+        </li>
+
+        <li class="nav-item me-5 nav-itemall ">
+        <form  action="{% url 'signin' %}" method="post">
+                    {% csrf_token %}
+
+    
+<div class="d-flex flex-row justify-content-center align-items-center position-relative bg-white rounded-3 border border-warning ms-5 btnall-login ">
+    <div class="container-fluid position-absolute me-5">
+    <i class="fas fa-sign-out-alt "></i>
+    </div>
+    <input
+        type="submit"
+        class="btn ps-5  fw-bold  "
+        name="logout"
+        value="logout"
+    >
+</div>
+    </form>
+        </li>
+    {% endif %}
+
+
+
+      </ul>
+    </div>
+  </div>
+    
+  
+
+</nav>
+
+</header>
+
+
+<section id="signup">
+    <div class="container-fluid  me-extra  mt-extra w-25    mx-auto min-vh-50 overflow-hidden     signup-container">
+        <div class="row ">
+            <div class=" rounded-5     signup-card">
+
+            <div class="container  pb-5   flex-column justify-content-center align-items-center  signip-form-container">
+                <p class="h-5 fw-italic fs-3 pb-1  text-center text-warning signup-title">Sign<spain class="text-primary"> Up</spain></p>
+
+                <form class="d-flex flex-column mb-1 justify-content-center gap-3" action="{% url 'signup' %}" method="post">
+                    {% csrf_token %}
+                    <div class="d-flex  align-items-center">
+                    <div class="person me-2">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+
+                    <input
+                        type="text"
+                        name="firstname"
+                        class="form-control border-0 border-bottom border-dark rounded-0 shadow-none"
+                        placeholder="First Name"
+                        required
+                    >
+                    </div>
+
+                    <div class="d-flex  align-items-center">
+
+                    <div class="person me-2">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <input type="text" name="middlename" class="form-control border-0 border-bottom border-dark rounded-0 shadow-none" placeholder="Middle Name" >
+
+                    </div>
+
+                    <div class="d-flex  align-items-center">
+
+                    <div class="person me-2">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <input type="text" name="lastname" class="form-control border-0 border-bottom border-dark rounded-0 shadow-none" placeholder="Last Name" required>
+
+                    </div>
+
+                    <div class="d-flex  align-items-center">
+                    <div class="person me-2">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+
+                    <input type="number" name="phonenumber" class="form-control border-0 border-bottom border-dark rounded-0 shadow-none" placeholder="Mobile Number" required>
+
+                    </div>
+
+                    <div class="d-flex  align-items-center">
+
+                    <div class="lock">   <i class="fa-solid fa-lock-open"></i> </div> 
+                    <input type="password" name="password" class="form-control border-0 border-bottom border-dark rounded-0 shadow-none" placeholder="Password" required>
+
+                    </div>
+
+                    <div class="d-flex  align-items-center">
+
+                    <div class="lock">   <i class="fa-solid fa-lock-open"></i> </div> 
+                    <input type="password" name="confirmpassword" class="form-control border-0 border-bottom border-dark rounded-0 shadow-none" placeholder="confirm Password" required>
+
+                    </div>
+
+
+
+                    
+
+
+                    <button type="submit" class="btn text-white h-25 rounded-2  fs-4 pb-1 signup-btn" name="signup" value="signup">Sign Up</button>
+                    {% if err %}
+                    <div class="auth-error">{{ err }}</div>
+                    {% endif %}
+
+                </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </section>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

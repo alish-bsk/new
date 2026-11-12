@@ -1,0 +1,37 @@
+
+/* nav bar container */
+
+
+.btn-search  {
+    margin-left: 16rem;
+    margin-top: -2.4rem;
+
+}
+.search-input{
+    width: 300px !important;
+    border: 3px solid  !important;
+}
+
+.btn-search:hover{
+    border-color: rgb(255, 183, 15) !important;
+    border:5 solid;
+
+}
+.navbar-a:hover{
+    border-bottom: 2px solid rgb(255, 213, 86) !important;
+    transition: border-bottom 0.3s ease !important;
+    transform: scaleX(1.1);
+    
+
+}
+.img-nav{
+    width:70px;
+        height:70px;
+
+}
+.btnall-login:hover{
+    border:.1rem solid rgb(255, 162, 0);
+    transform: scaleX(1.1);
+
+
+}

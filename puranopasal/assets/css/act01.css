@@ -1,0 +1,114 @@
+.acct-one {
+    background-color: #bebebe; 
+    color: #333;
+    margin-top: 140px;
+    margin-left: 195px;
+    position: absolute;
+    width: 1106px;
+    height: 397px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.acct-tw {
+    background-color: #353434; 
+    color: #333;
+    margin-top: 40px;
+    margin-left: 55px;
+    position: absolute;
+    width: 409px;
+    height: 317px;
+}
+.acct-wrd{
+    padding-top:45px;
+    padding-left:560px;
+    font-size: 25px;
+    position: absolute;
+
+}
+.btn-edit{
+    margin-top:10px;
+    margin-left:2px;
+    background-color: rgb(255, 162, 0);
+    width: 181px;
+    height:70px;
+    font-size:25px;
+
+}
+.acct-list{
+    background-color: #bebebe; 
+    color: #333;
+    margin-top: 150px;
+    margin-left:-558px;
+    width: 1106px;
+    height: 1162px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+}
+
+.acct-a{
+    white-space: nowrap; 
+    display: inline-block;
+    color: rgb(12, 12, 12);
+    font-size: 20px;
+    padding: 10px 134px;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s, transform 0.3s;
+    font-size: 25px;
+    border-bottom: 2px solid #000;
+
+}
+.acct-btnone{
+    position: absolute;
+    margin-top:-1105px;
+    margin-left:-460px;    
+    
+    background-color: rgb(255, 162, 0);
+    width: 181px;
+    height:40px;
+    font-size:25px;
+ 
+}
+.acct-btntw{
+    position: absolute;
+    margin-top:-1105px;
+    margin-left:-210px;    
+    
+    background-color: rgb(255, 162, 0);
+    width: 181px;
+    height:40px;
+    font-size:25px;
+ 
+}
+.acct-btnthre{
+    position: absolute;
+    margin-top:-1105px;
+    margin-left:40px;    
+    
+    background-color: rgb(255, 162, 0);
+    width: 181px;
+    height:40px;
+    font-size:25px;
+ 
+}
+.acct-btnfur{
+    position: absolute;
+    margin-top:-1105px;
+    margin-left:285px;    
+    
+    background-color: rgb(255, 162, 0);
+    width: 181px;
+    height:40px;
+    font-size:25px;
+ 
+}
+acct-btnfiv{
+    position: absolute;
+    margin-top:-1105px;
+    margin-left:285px;    
+    
+    background-color: rgb(255, 162, 0);
+    width: 181px;
+    height:40px;
+    font-size:25px;
+
+}

@@ -1,0 +1,42 @@
+{% extends 'electron01.html' %}
+{% block content %}
+<div class="container-fluid ms-extra mt-extra laptop-contcard" >
+<div class="d-flex flex-row flex-wrap    gap-5   ms-extra  prdt-all">
+
+        {% for sl in prdsl %}
+       {% if sl.category_name_id == 8 %}
+        {% if sl.expiredate >= today_date %}
+
+
+
+            <div class="card cardall-laptop  h-extra  laptop-cardgrp" >
+
+                <a href="{% url 'product_info' %}?id={{ sl.product_id }}">
+                    <img src="{{ sl.image.url }}" class="card-img-top img-fluid w-extra h-extra laptop-cardimg" alt="image">
+                </a>
+
+                <a href="{% url 'product_info' %}?id={{ sl.product_id }}"
+                   class="h5 text-dark text-center mt-5 text-decoration-none card-name d-block">
+                    {{ sl.model_name }}
+                </a>
+
+                <p class="h5  text-center text-body-tertiary mb-3 ">
+                    RS {{ sl.price }}
+                </p>
+
+            </div>
+
+        {%endif%}
+        {%endif%}
+        {% endfor %}
+        </div>
+
+</div>
+{% endblock %}
+
+
+
+
+
+
+

@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{%static 'css/info06.css' %}">
+    <link rel="stylesheet" href="{%static 'css/divhomes10.css' %}">
+    <link rel="stylesheet" href="{%static 'css/signinpage16.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/profileed05.css' %}">
+    <script src="{% static 'javascript/poppup11.js' %}" defer></script>
+    <script src="{% static 'javascript/searchvoice.js' %}" defer></script>
+    <script src="{% static 'javascript/profileedresponse05.js' %}" defer></script>
+    <script src="{% static 'javascript/productadd03.js' %}" defer></script>
+
+    <script src="{% static 'javascript/useradajax06.js' %}" defer></script>
+    <script src="{% static 'javascript/soldajax02.js' %}" defer></script>
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+
+</head>
+<body class="container-fluid h-extra w-extra  bdy-prfuser">
+
+
+    <header class="main-header">
+
+ <nav class="navbar navbar-expand-lg fixed-top  z-3  navbar-top">
+  <div class="container-fluid">
+
+
+    
+        <img class="rounded ms-3 mt-2 img-nav" src="{% static 'image/next.png' %}" alt="puranopasal Logo">
+        <!---p class="h1 m-auto fst-italic fw-bold   text-warning ">PuranoPasal</p-->
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+
+        
+    <div class="collapse navbar-collapse " id="navbarTogglerDemo01">
+
+      <ul class="navbar-nav ms-auto me-3 mb-2 mb-lg-0 text-center">
+        <li class="nav-item me-5 nav-itemall ">
+          <a href="{% url 'home' %}" class="nav-link fst-normal active fw-bold fs-5 text-white navbar-a " aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item me-5 nav-itemall  ">
+                  <a href="{% url 'elect' %}"  class="nav-link fst-normal fw-bold text-white fs-5 navbar-a " href="#">Electronics</a>
+
+        </li>
+        <li class="nav-item me-5 nav-itemall">
+        <form id="searchForm" action="{% url 'elect' %}" class="d-flex justify-content-center ms-5"  method="post"  enctype="multipart/form-data">
+                    {% csrf_token %}
+
+        <input type="text" name="search-data" class="form-control fst-normal     border-warning rounded-start-5 rounded-emd-0   search-input"  placeholder="Search" aria-label="Search"/>
+        <button type="submit"  class="btn  bg-white    rounded-start-0 rounded-end-circle btn-search " name="search" value="search" ><i class="fas fa-search"></i></button>
+      </form>
+        </li>
+    {% if request.session.phonenumber == None %}
+
+        <li class="nav-item me-5  nav-itemall">
+        <a href="{% url 'signin' %}" class=" nav-link w-5 h-5 ms-5  fst-normal bg-white  broder-5 rounded-3 border-warning fw-bold  btnall-login  " > <i class="fas fa-user-circle"></i> SignIn</a>
+        </li>
+
+        <li class="nav-item me-5 nav-itemall ">
+        <a href="{% url 'signup' %}" class="nav-link w-5 h-5 ms-5 fst-normal bg-white  broder-5 rounded-3 border-warning fw-bold btnall-login "> <i class="fas fa-sign-out-alt"></i> Signup</a>
+        </li>
+    {% else %}
+        <li class="nav-item me-5 nav-itemall">
+        <a href="{% url 'signin' %}" class=" nav-link w-5 h-5 ms-5   fst-normal bg-white  broder-5 rounded-3 border-warning fw-bold  btnall-login  " > <i class="fas fa-user-circle"></i> {{name.first_name}}</a>
+        </li>
+
+        <li class="nav-item me-5 nav-itemall ">
+        <form  action="{% url 'signin' %}" method="post">
+                    {% csrf_token %}
+
+    
+<div class="d-flex flex-row justify-content-center align-items-center position-relative bg-white rounded-3 border border-warning ms-5 btnall-login ">
+    <div class="container-fluid position-absolute me-5">
+    <i class="fas fa-sign-out-alt "></i>
+    </div>
+    <input
+        type="submit"
+        class="btn ps-5  fw-bold  "
+        name="logout"
+        value="logout"
+    >
+</div>
+    </form>
+        </li>
+    {% endif %}
+
+
+
+      </ul>
+    </div>
+  </div>
+    
+  
+
+</nav>
+
+</header>
+
+
+<section id="profile ">
+    <div class="container-fluid mt-extra ms-extra  h-extra w-extra   acct-one" id="acct-one">
+        <div class="container-fluid pt-extra ps-extra  img-prf" id="acct-tw">
+        {% if acct.image %}
+        <img src="{{ acct.image.url }}" alt="User Image" class="img mt-extra ms-extra w-extra h-extra  user-prfimage">
+        {% else %}
+        <img src="{% static 'image/img.jpg' %}" alt="Placeholder Image" class="img mt-extra ms-extra w-extra h-extra user-image">  
+        {% endif %}
+        
+        </div>
+
+<div class="container-fluid mt-extra ms-extra w-50 acct-wrd" id="acct-wrds">
+<table>
+                <tr>
+                    <td><p>Name : </p></td>
+                    <td><p>{{acct.first_name}} {{acct.middle_name}} {{acct.last_name}}</p></td>
+    
+                    </tr>
+                    <tr>
+                        <td><p>Phone Number : </p></td>
+                        <td><p>{{acct.phonenumber}}</p></td>
+        
+                        </tr>
+                        <tr>
+                            <td><p>Location : </p></td>
+                            <td><p>{{acct.location}}</p></td>
+            
+                            </tr>
+        <table>
+        
+            <button class="btn mt-extra ms.extra w-extra h-extra pb-5  btn-edit" onclick="openpop()">Profile Edit</button>
+
+    
+        </div>
+ </div>
+
+    
+</section>
+
+<section id="user-ads  ">
+<div class="container-fluid w-extra h-extra ms-extra mt-extra overflow-y-auto  user-ads " id="acct-list">
+<div class="d-flex flex-row  justify-content-center text-dark   pt-3 acher-ads" >
+    <p href="" class="h3  text-decoration-underline acct-a">Ads Post</p>
+    <p href="" class="h3  text-decoration-underline acct-a">Analytics</p>
+    <p href="" class="h3  text-decoration-underline acct-a">Save Lists</p>
+</div>
+
+<hr class="border border-dark border-1 opacity-100">
+
+<div id="  " class="container-fluid main-btn ">
+<button   class="btn bg-warning text-dark fs-4   btn-adsprdt" onclick="prdtopenpop()"  >Ads product</button>
+
+<form action="{% url 'signinpage_btn' %}" method="post" id="user-add" enctype="multipart/form-data">
+        {% csrf_token %}
+       <div class="d-flex flex-row  justify-content-center position-absolute text-dark btn-adsgrp" >
+        <input type="submit" name="prdtads" class="bg-warning text-dark btn-ads" value="All" >
+        <input type="submit" name="prdtads" class="bg-warning text-dark btn-ads" value="Sold" >
+        <input type="submit" name="prdtads" class="bg-warning text-dark btn-ads" value="Expire" >
+        
+        </div>
+
+</form> 
+</div>
+</div>
+
+
+</section>
+            
+
+<section id="user_product">
+<div class="container ms-extra mt-extra w-extra h-extra  userads-prdt " >    
+<div id="product_listprdt" class="d-flex flex-wrap gap-5   text-danger ms-3 product_listprdt" >
+
+</div >
+
+</div>
+</section>
+
+        
+
+
+
+
+
+
+<!--profile edit -->
+
+<section>
+    <div class="container-fluid overlay" id="overlay"></div>
+
+    <div class="container-fluid rounded-4 w-extra h-extra ms-extra mt-extra popup" id="popup">
+
+        <form action="{% url 'signinpage' %}"
+              method="post"
+              class="profileedit"
+              id="profileedit"
+
+              enctype="multipart/form-data" >
+
+            {% csrf_token %}
+
+            <div class="container-fluid d-flex flex-column mb-1 mt-5 gap-2 justify-content-center">
+
+                <!-- First Name -->
+                <div class="d-flex align-items-center">
+                    <div class="person me-2">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+
+                    <input type="text" name="firstname"
+                           class="form-control border-0 border-bottom  border-dark rounded-0 shadow-none bg-transparent"
+                           placeholder="First Name" required>
+                </div>
+                <div class="container-fluid text-danger errorprf fs-5" id="firstname_errorprf"></div>
+
+                <!-- Middle Name -->
+                <div class="d-flex align-items-center">
+                    <div class="person me-2">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+
+                    <input type="text" name="middlename"
+                           class="form-control border-0 border-bottom border-dark rounded-0 shadow-none bg-transparent"
+                           placeholder="Middle Name" >
+                </div>
+                <div class="container-fluid text-danger errorprf fs-5" id="middlename_errorprf"></div>
+
+                <!-- Last Name -->
+                <div class="d-flex align-items-center">
+                    <div class="person me-2">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+
+                    <input type="text" name="lastname"
+                           class="form-control border-0 border-bottom border-dark rounded-0 shadow-none bg-transparent"
+                           placeholder="Last Name" required>
+                </div>
+                <div class="container-fluid text-danger errorprf fs-5" id="lastname_errorprf"></div>
+
+                <!-- Location -->
+                <div class="d-flex align-items-center">
+                    <div class="person me-2">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+
+                    <input type="text" name="location"
+                           class="form-control border-0 border-bottom border-dark rounded-0 shadow-none bg-transparent"
+                           placeholder="Location" required>
+                </div>
+                <div class="container-fluid text-danger errorprf fs-5" id="locationname_errorprf"></div>
+
+                <!-- Profile Picture -->
+                <div class="d-flex gap-2 align-items-center">
+                    <i class="fa-solid fa-image"></i>
+                    <input type="file"
+                           class="form-control"
+                           name="profile_picture"
+                           accept="image/*">
+                </div>
+
+                <!-- Submit -->
+                <button type="submit"
+                        class="btn mt-extra ms-extra pb-extra w-extra h-extra bg-warning profileedt_btn"  name="submit" value="OK">
+                    OK
+                </button>
+                
+                <div class="container-fluid  text-center text-danger errorprf fs-5" id="successnameprf"></div>
+
+
+            </div>
+        </form>
+
+        <!-- Cancel -->
+        <button type="button"
+                class="btn mt-extra ms-extra pb-extra w-extra h-extra bg-warning profilecnl_btn"
+                onclick="closepop()">
+            Cancel
+        </button>
+
+        <p style="font-size:20px; margin:20px; color:red;">
+            {{ accterr }}
+        </p>
+
+    </div>
+</section>
+
+
+
+<section id="userproduct">
+
+<div class="container-fluid overlay" id="overlay"></div>
+
+<form action="{% url 'product_cost' %}"  method="post" class="prdtcost" id="prdtcost" enctype="multipart/form-data">
+
+        {% csrf_token %}
+
+<div class="d-flex   flex-column justify-content-center   px-2 pt-3 pb-3 gap-3 prdt-list "   id="prdt-list">
+    
+ 
+    <input type="number" name="numberid" placeholder="Id Number"class="form-control dividnum_inpt" id="dividnum_inpt" >
+
+
+
+
+    <input type="text" name="modelname" placeholder="Model Name" class="form-control"  required>
+     <div  class="container-fluid text-danger errorprd" id="modelname_errorprd"></div>
+
+    <input type="text" name="brandname" placeholder="Brand Name" class="form-control" required>
+        <div  class="container-fluid text-danger errorprd" id="brandname_errorprd"></div>
+
+    <label class="">Category:</label>
+    <select name="category"  class="">
+        <option value="1">laptop</option>
+        <option value="2">headphone</option>
+        <option value="3">iron</option>
+        <option value="4">microoven</option>
+        <option value="5">mobile</option>
+        <option value="6">refrigerator</option>
+        <option value="7">speaker</option>
+        <option value="8">tv</option>
+        <option value="9">vacuum</option>
+
+
+    </select>
+
+<label class="">Delivery:</label>
+
+    <select name="delivery"  class="">
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+    </select>
+
+<label class="">Negotiable:</label>
+    <select name="negotiable"  class="">
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+    </select>
+
+    <input type="date" name="date"  class="form-control" required>
+
+    <input type="date" name="expiredate"  class="form-control" required>
+    
+    <input type="number" name="price" placeholder="Price"class="form-control" required>
+        <div  class="container-fluid text-danger errorprd" id="pricename_errorprd"></div>
+
+    <input type="text" name="processor" placeholder="Processor"class="form-control" required> 
+        <div  class="container-fluid text-danger errorprd" id="processorname_errorprd"></div>
+
+    <input type="text" name="ram" placeholder="Ram"class="form-control" required>
+        <div  class="container-fluid text-danger errorprd" id="ramname_errorprd"></div>
+
+    <input type="text" name="HDD" placeholder="HDD"class="form-control" required>
+        <div  class="container-fluid text-danger errorprd" id="hddname_errorprd"></div>
+
+    <input type="text" name="screensize" placeholder="Screen Size"class="form-control" required>
+        <div  class="container-fluid text-danger errorprd" id="screensizename_errorprd"></div>
+
+    <input type="text" name="battery" placeholder="Battery"class="form-control" required>
+        <div  class="container-fluid text-danger errorprd" id="batteryname_errorprd"></div>
+
+  <div class="d-flex gap-1 align-items-center">
+    <i class="fa-solid fa-image"></i>
+
+    <input type="file" class="" name="div_picture" value="profile_picture" required>
+
+    </div>
+
+<textarea  name="description" rows="4" cols="50" class="" placeholder="Please describe your product more" required></textarea>
+<div  class="container-fluid text-danger errorprd" id="descriptionname_errorprd"></div>
+<div  class="container-fluid text-danger errorprd" id="successprd"></div>
+
+
+
+
+<input type="submit" name="submit" class="btn  div_btn">
+
+</form>
+
+
+
+<button class="btn  div_btn" id="divedt_btn"  onclick="divnumopenpop()">edit</button>
+<button class="btn  div_btn" id="divedt_btn"  onclick="prdtopenpopclose()">cancel</button>
+
+<p class="">{{prderr}}</p><br>
+<label class="bg-warning ps-3">select for delete or sold</label>
+
+<form action="{% url 'product_sold' %}"  method="post" class="" id="solderror" enctype="multipart/form-data">
+{% csrf_token %}
+<input type="number" name="idnumber" placeholder="Id Number" class="form-control" required>
+<div  class="container-fluid text-danger errorprd" id="idnumbername_errorprd"></div>
+<div  class="container-fluid text-danger errorprd" id="successname"></div>
+<div  class="container-fluid text-danger errorprd" id="deletename_errorprd"></div>
+
+
+<label class="">sold:</label>
+<select name="sold"  class="">
+    <option value="sold">sold</option>
+    <option value="unsold">unsold</option>
+</select>
+
+<input type="submit" name="submit" class="btn  div_btn" value="OK">
+<input type="submit" name="submit" class="btn  div_btn" value="delete">
+
+
+</form>
+<button class="btn  div_btn" id="divedt_btn"  onclick="prdtopenpopclose()">cancel</button>
+
+</div>
+
+<p class="">{{prddelerr}}</p>
+
+
+
+
+
+</section>    
+
+
+
+<script>
+    const productInfoUrl = "{% url 'product_info' %}";
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
+
+</body>
+</html>

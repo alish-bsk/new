@@ -1,0 +1,110 @@
+
+
+.popup{
+    background-color:rgb(230, 229, 229);
+    border:.1rem solid rgb(255, 166, 77);
+    transform: translate(-50%,-50%)scale(1);
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+}
+.open-popup{
+    visibility: visible;
+    transform: translate(-50%,-50%)scale(1);
+    z-index:100; /* Above the overlay */
+    background-color: white;
+    padding: 20px;
+    border:.1rem solid rgb(255, 166, 77);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+
+
+}
+
+
+.open-popup.w-extra.h-extra{
+    height:45rem;
+    width: 25rem;
+
+}
+.open-popup.ms-extra.mt-extra{
+    margin-top: -105%;
+    margin-left: 5%;
+
+}
+
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    backdrop-filter: blur(9px); /* Background blur effect */
+    display: none; 
+}
+
+
+
+.btn.profileedt_btn{
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    border:.2rem solid black;
+
+    transition: transform 0.3s ease;
+
+
+}
+.btn.profileedt_btn.mt-extra.ms-extra.pb-extra{
+    margin-left: 3rem;
+    margin-top:2rem;
+    padding-bottom:2rem;
+
+
+}
+.btn.profileedt_btn.w-extra.h-extra{
+    width: 15rem;
+    height: 2rem;
+
+}
+
+
+
+.btn.profileedt_btn:hover {
+    border:.2rem solid black;
+
+  transform: scale(1.1);
+}
+
+
+
+
+.btn.profilecnl_btn{
+    border:.2rem solid black;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+
+    transition: transform 0.3s ease;
+
+
+}
+.btn.profilecnl_btn.mt-extra.ms-extra.pb-extra{
+    margin-left: 3.7rem;
+    margin-top:2rem;
+    padding-bottom:2rem;
+
+
+
+}
+.btn.profilecnl_btn.w-extra.h-extra{
+    width: 15rem;
+    height: 2rem;
+
+}
+
+
+
+.btn.profilecnl_btn:hover {
+  border:.2rem solid black;
+
+  transform: scale(1.1);
+}
+
+

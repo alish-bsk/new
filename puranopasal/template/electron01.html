@@ -1,0 +1,168 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <title>Electronics</title>
+
+    <link rel="stylesheet" href="{% static 'css/divhomes10.css' %}">
+    <link rel="stylesheet" href="{% static 'css/all-list04.css' %}">
+    <link rel="stylesheet" href="{% static 'css/signinpage12.css' %}">
+
+
+    <script src="{% static 'javascript/electronicdata01.js' %}" defer></script>
+
+    <link rel="stylesheet" href="{% static 'css\elect02.css' %}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <script src="{% static 'javascript/searchvoice.js' %}" ></script>
+   <script
+  src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.6.2/dist/dotlottie-wc.js"
+  type="module"
+>
+</script>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+
+</head>
+
+<body class="bdy-bck">
+    <header class="main-header">
+
+ <nav class="navbar navbar-expand-lg fixed-top  z-3  navbar-top">
+  <div class="container-fluid">
+
+
+    
+        <img class="rounded ms-3 mt-2 img-nav" src="{% static 'image/next.png' %}" alt="puranopasal Logo">
+        <!---p class="h1 m-auto fst-italic fw-bold   text-warning ">PuranoPasal</p-->
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+
+        
+    <div class="collapse navbar-collapse " id="navbarTogglerDemo01">
+
+      <ul class="navbar-nav ms-auto me-3 mb-2 mb-lg-0 text-center">
+        <li class="nav-item me-5 nav-itemall ">
+          <a href="{% url 'home' %}" class="nav-link fst-normal active fw-bold fs-5 text-white navbar-a " aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item me-5 nav-itemall  ">
+                  <a href="{% url 'elect' %}"  class="nav-link fst-normal fw-bold text-white fs-5 navbar-a " href="#">Electronics</a>
+
+        </li>
+        <li class="nav-item me-5 nav-itemall">
+        <form id="searchForm" action="{% url 'elect' %}" class="d-flex justify-content-center ms-5"  method="post"  enctype="multipart/form-data">
+                    {% csrf_token %}
+
+        <input type="text" name="search-data" class="form-control fst-normal     border-warning rounded-start-5 rounded-emd-0   search-input"  placeholder="Search" aria-label="Search"/>
+        <button type="submit"  class="btn  bg-white    rounded-start-0 rounded-end-circle btn-search " name="search" value="search" ><i class="fas fa-search"></i></button>
+      </form>
+        </li>
+    {% if request.session.phonenumber == None %}
+
+        <li class="nav-item me-5  nav-itemall">
+        <a href="{% url 'signin' %}" class=" nav-link w-5 h-5 ms-5  fst-normal bg-white  broder-5 rounded-3 border-warning fw-bold  btnall-login  " > <i class="fas fa-user-circle"></i> SignIn</a>
+        </li>
+
+        <li class="nav-item me-5 nav-itemall ">
+        <a href="{% url 'signup' %}" class="nav-link w-5 h-5 ms-5 fst-normal bg-white  broder-5 rounded-3 border-warning fw-bold btnall-login "> <i class="fas fa-sign-out-alt"></i> Signup</a>
+        </li>
+    {% else %}
+        <li class="nav-item me-5 nav-itemall">
+        <a href="{% url 'signin' %}" class=" nav-link w-5 h-5 ms-5   fst-normal bg-white  broder-5 rounded-3 border-warning fw-bold  btnall-login  " > <i class="fas fa-user-circle"></i> {{name.first_name}}</a>
+        </li>
+
+        <li class="nav-item me-5 nav-itemall ">
+        <form  action="{% url 'signin' %}" method="post">
+                    {% csrf_token %}
+
+    
+<div class="d-flex flex-row justify-content-center align-items-center position-relative bg-white rounded-3 border border-warning ms-5 btnall-login ">
+    <div class="container-fluid position-absolute me-5">
+    <i class="fas fa-sign-out-alt "></i>
+    </div>
+    <input
+        type="submit"
+        class="btn ps-5  fw-bold  "
+        name="logout"
+        value="logout"
+    >
+</div>
+    </form>
+        </li>
+    {% endif %}
+
+
+
+      </ul>
+    </div>
+  </div>
+    
+  
+
+</nav>
+
+</header>
+
+<section id="user-data">
+<div class="container-fluid  electronics-container">
+<div class="grid  grid-cols-6 gap-2">
+
+
+    <!-- Sidebar Navigation -->
+
+<div class="container-fluid w-extra  h-100 mt-extra el-lists">
+
+<aside class="el-sidebar">
+ <p class="h-1 mt-2 pt-4 ms-2 fw-bold fs-5 text-center w-extra h-extra me-extra el-sidebar-header">Categories</p>
+                
+<form id="electForm" class="from-control d-flex flex-column align-items-start gap-1 " action="{% url 'elect' %}" method="post">
+        {% csrf_token %}
+<button class="rounded-2 w-5 bg-dark text-white w-100 list-btn"   name="elect" value="elect">Electronic</button><br>
+<button class="rounded-2 w-5 bg-warning text-dark w-100 list-btn"  name="laptop" value="laptop">laptop</button><br>
+<button class="rounded-2 w-5 bg-warning text-dark w-100 list-btn"  value='mobile' name='mobile'>Mobile</button><br>
+<button class="rounded-2 w-5 bg-warning text-dark w-100 list-btn"  value='speaker' name='speaker'>Speaker</button><br>
+<button class="rounded-2 w-5 bg-warning text-dark w-100 list-btn"  value='headphone' name='headphone'>Headphone</button><br>
+<button class="rounded-2 w-5 bg-warning text-dark w-100 list-btn"  value='tv' name='tv'>Tv</button><br>
+<button class="rounded-2 w-5 bg-warning text-dark w-100 list-btn"  value='refrigerator' name='refrigerator'>Refrigerator</button><br>
+<button class="rounded-2 w-5 bg-warning text-dark w-100 list-btn"  value='microoven' name='microoven'>Micro oven</button><br>
+<button class="rounded-2 w-5 bg-warning text-dark w-100 list-btn"  value='vaccum' name='vaccum'>Vacuum </button><br>
+<button class="rounded-2 w-5 bg-warning text-dark w-100 list-btn"  value='iron' name='iron'>Iron</button><br>
+</form>
+</aside>
+
+</div>
+
+
+
+
+
+<!-- Main Content for Electronics -->
+<!-- Dynamic Content (Laptops, Mobiles, etc.) -->
+
+<div class="container-fluid mt-extra ms-extra w-extra prdt-listelec" >
+{% block content %}
+    <!-- Default content if not overridden -->
+{% endblock %}
+
+
+</div>
+
+</div>
+</div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+
+/* nav bar container */
+
+.navunorder-bar{
+    gap:150px;
+}
+
+
+.btn-search  {
+    margin-left: 16rem;
+    margin-top: -2.4rem;
+
+}
+.search-input{
+    width: 300px !important;
+    border: 3px solid  !important;
+}
+
+.btn-search:hover{
+    border-color: rgb(255, 183, 15) !important;
+    border:5 solid;
+
+}
+.navbar-a:hover{
+    background-color: red !important;
+}

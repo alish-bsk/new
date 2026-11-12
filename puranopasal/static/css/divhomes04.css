@@ -1,0 +1,98 @@
+
+/* nav bar container */
+
+.bdy-bck{
+    width: 100%;
+
+    max-width:100%;
+    
+
+
+}
+.navbar-top{
+    box-shadow: 0 0.3rem 0.8rem rgba(80, 80, 80, 0.3);
+
+}
+.carousel-container{
+        box-shadow: .5rem .5rem .1rem rgba(0, 0, 0, 0.3);
+
+}
+.search-input{
+    border: 3px solid  !important;
+}
+
+.btn-search:hover{
+    border-color: rgb(255, 183, 15) !important;
+    border:5 solid;
+
+}
+.navbar-a:hover{
+    border-bottom: 2px solid rgb(255, 213, 86) !important;
+    transition: border-bottom 0.3s ease !important;
+    transform: scaleX(1.1);
+    
+
+}
+.img-nav{
+    width:5rem;
+        height:5rem;
+        
+
+}
+
+.btnall-login:hover{
+    border:.1rem solid rgb(255, 162, 0);
+    transform: scaleX(1.1);
+
+
+}
+.card-recomendation{
+    box-shadow: 0rem .5rem .1rem rgba(0, 0, 0, 0.3);
+    border-radius:1rem;
+    background-color: rgb(230, 236, 236);
+
+
+
+}
+
+
+.card-all {
+    width: 450px !important;
+    height: 15rem !important;
+    background-color: brown;
+    animation: scrollRow 10s linear infinite;
+}
+
+@keyframes scrollRow {
+    0% {
+        transform: translateX(-100%);
+        opacity: 1;
+    }
+
+    80% {
+        transform: translateX(100%);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+
+.card-img{
+    width: 10rem;
+    height: 8rem;
+}
+
+.cardall-recommendation{
+        box-shadow: .2rem .2rem .1rem rgba(0, 0, 0, 0.3);
+
+}
+
+.cardall-laptop{
+     box-shadow: .2rem .2rem .1rem rgba(0, 0, 0, 0.3);
+     margin-top:150px;
+
+}

@@ -1,0 +1,155 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link rel="stylesheet" href="{%static 'css\info08.css' %}">
+    <link rel="stylesheet" href="{%static 'css\divhomes10.css' %}">
+    <link rel="stylesheet" href="{%static 'css\signin07.css' %}">
+    <link rel="stylesheet" href="{%static 'css\signinpage16.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/profileed14.css' %}">
+    <script src="{% static 'javascript/poppup09.js' %}" defer></script>
+    <script src="{% static 'javascript/searchvoice.js' %}" defer></script>
+
+
+
+</head>
+<body class="bdy-bck">
+    <header class="main-header">
+        <nav class="divone">
+            <div class="nav-left">
+                <a href="{% url 'home' %}">
+                    <img class="divoneimg" src="{% static 'image/next.png' %}" alt="puranopasal Logo">
+                </a>
+                <div class="nav-links">
+                    <a href="{% url 'home' %}">Home</a>
+                    <a href="{% url 'elect' %}">Electronics</a>
+                </div>
+            </div>
+
+            <div class="nav-center">
+                <div class="search-container">
+                    <form  action="{% url 'elect' %}"  method="post"  enctype="multipart/form-data">
+                    {% csrf_token %}
+
+                    <input type="text" class="search-bar" placeholder="Search electronic device at puranopasal" aria-label="Search" name="search-data">
+                <button name="search" value="search"  class="search-button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="nav-right">
+                {% if request.session.phonenumber == None %}
+                    <a href="{% url 'signup' %}" class="btn-utility"><i class="fas fa-user-plus"></i> Sign up</a>
+                    <a href="{% url 'signin' %}" class="btn-utility btn-accent"><i class="fas fa-sign-in-alt"></i> Sign in</a>
+                {% else %}
+                <form action="{% url 'signinpage' %}" method="post">
+                    {% csrf_token %}
+                    <button name="signinpage" value="signinpage"  class="btn-utility user-profile-link"><i class="fas fa-user-circle"></i> {{name.first_name}}</button>
+
+                                </form>
+                <form action="{% url 'signin' %}" method="post">
+                    {% csrf_token %}
+        
+                    <button name="logout" value="logout" class="btn-utility"><i class="fas fa-sign-out-alt"></i> Logout</button>
+                </form>
+                {% endif %}
+            </div>
+        </nav>
+    </header>
+        
+        
+       
+
+
+    <!-- advertisment bar for website-->
+
+
+<div class="acct-one">
+  <div id="acct-tw">
+    {% if acct.image %}
+      <img src="{{ acct.image.url }}" alt="User Image" class="user-prfimage">
+    {% else %}
+      <img src="{% static 'image/img.jpg' %}" alt="Placeholder Image" class="user-image">  
+    {% endif %}
+  </div>
+
+  <div class="acct-wrd" id="acct-wrds">
+    <table>
+      <tr>
+        <td><p>Name :</p></td>
+        <td><p>{{ acct.first_name }} {{ acct.middle_name }} {{ acct.last_name }}</p></td>
+      </tr>
+      <tr>
+        <td><p>Phone Number :</p></td>
+        <td><p>{{ acct.phonenumber }}</p></td>
+      </tr>
+      <tr>
+        <td><p>Location :</p></td>
+        <td><p>{{ acct.location }}</p></td>
+      </tr>
+    </table>
+
+    <button class="btn-edit" onclick="openpop()">Profile Edit</button>
+  </div>
+</div>
+
+<div class="acct-list" id="acct-list">
+    <a href="" class="acct-a">Ads Post</a>
+    <a href="" class="acct-a">Analytics</a>
+    <a href="" class="acct-a">Save Lists</a>
+
+    {% block content %}
+    <!-- Default content if not overridden -->
+    {% endblock %}
+</div>
+
+
+
+
+            
+
+
+    <div id="main-btn" class="main-btn">
+        
+        <form action="{% url 'signinpage' %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            
+            <button type="submit" name="adbtn" class="acct-btnone" value="Adspost" ><i class='fas fa-plus'></i> AdsPost</button>
+            <button type="submit" name="adbtn" class="acct-btntw" value="All"  ><i class="fas fa-list-alt"></i> All</button>
+            <button type="submit" name="adbtn" class="acct-btnthre" value="Sold"  ><i class="fas fa-money-bill-wave	"></i> Sold</button>
+            <button type="submit" name="adbtn" class="acct-btnfur" value="Expire"  ><i class="fas fa-calendar-plus"></i> Expire</button>
+        </form>     
+    </div>
+
+
+
+<!--test one -->
+<div class="overlay" id="overlay"></div>
+ <div class="popup" id="popup">   
+    <form action="{% url 'signinpage' %}"  method="post" class="profile_frm" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="text" name="firstname" placeholder="Frist Name"class="profile_inpt" required><br>
+        <input type="text" name="middlename" placeholder="Middle Name"class="profile_inpt"><br>
+        <input type="text" name="lastname" placeholder="Last Name"class="profile_inpt" required><br>
+        <input type="text" name="location" placeholder="Location"class="profile_inpt" required><br>
+        <input type="file" class="profile_file" name="profile_picture" value="profile_picture" class="hidden" required>
+        <p class="profile_file">select image</p><br> 
+        <input type="submit" name="submit" class="profile_btn" value="OK">
+
+
+
+        </form>
+        <button class="profile_btn"  onclick="closepop()">cancel</button><br>
+
+        <p style="font-size:20px;margin:-1px 180px;color:red;white-space: nowrap; background-color: pink;width:31%">{{accterr}}</p><br> 
+
+    </div>
+
+
+
+</body>
+</html>

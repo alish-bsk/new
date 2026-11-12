@@ -1,0 +1,161 @@
+
+/* nav bar container */
+
+.bdy-bck{
+    width: 100%;
+
+    max-width:100%;
+        background-color: rgba(220, 233, 254, 0.318);
+
+
+
+}
+.navbar-top{
+    background-color: rgb(0, 98, 255);
+    box-shadow: .2rem .2rem .1rem rgba(0, 0, 0, 0.3);
+
+}
+.carousel-container{
+    box-shadow: .2rem .3rem .1rem rgba(0, 0, 0, 0.3);
+
+}
+#carouselExampleAutoplaying{
+ opacity: 1;
+    transition: opacity 0.5s ease;
+}
+#carouselExampleAutoplaying.visible{
+    opacity: 0;
+
+}
+.carousel-container.mt-extra{
+    margin:8rem 0 0 0;
+}
+.search-input{
+    border: 3px solid  !important;
+}
+
+.btn-search:hover{
+    border-color: rgb(255, 183, 15) !important;
+    border:5 solid;
+
+}
+.navbar-a:hover{
+    border-bottom: 2px solid rgb(255, 213, 86) !important;
+    transition: border-bottom 0.3s ease !important;
+    transform: scaleX(1.1);
+    
+
+}
+.img-nav{
+    width:5rem;
+        height:5rem;
+        
+
+}
+
+.btnall-login:hover{
+    border:.1rem solid rgb(255, 162, 0);
+    transform: scaleX(1.1);
+
+
+}
+.card-recomendation{
+    box-shadow: 0rem .5rem .1rem rgba(0, 0, 0, 0.3);
+    border-radius:1rem;
+    background-color: rgb(230, 236, 236);
+
+
+
+}
+
+
+.card-all {
+    width: 450px !important;
+    height: 15rem !important;
+    background-color: brown;
+    animation: scrollRow 10s linear infinite;
+}
+
+@keyframes scrollRow {
+    0% {
+        transform: translateX(-100%);
+        opacity: 1;
+    }
+
+    80% {
+        transform: translateX(100%);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+
+.card-img.w-extra.h-extra{
+    width: 10rem;
+    height: 8rem;
+}
+
+.cardall-recommendation{
+        box-shadow: .2rem .2rem .1rem rgba(0, 0, 0, 0.3);
+
+}
+#recomendation{
+    opacity: 0;
+    transition: opacity 0.5s ease;
+
+
+}
+  #recomendation.visible {
+     opacity: 1;
+
+
+}
+.card-name:hover{
+        transform: scaleX(1);
+
+}
+
+.laptop-contcard.mt-extra.ms-extra{
+    margin:-10rem 0 0 0;
+
+
+
+}
+.laptop-cardgrp{
+    max-width:20rem;
+    box-shadow: .2rem .2rem .1rem rgba(0, 0, 0, 0.3);
+    margin-top:150px;
+
+}
+.laptop-cardgrp.h-extra{
+        height:27rem;
+}
+img.laptop-cardimg{
+    height:17rem; 
+    width:5550rem;
+}
+
+.laptop-cardgrp:hover{
+    background-color: rgb(181, 182, 249);
+    transform: scale(1.1);
+    
+
+}
+.laptop-seeallcont.ms-extra.mt-extra{
+    margin:2rem 0 0 82rem;
+}
+
+
+.footer-cont.h-extra{
+    height:50rem;
+    background-color: rgb(0, 98, 255);
+
+}
+
+.img-footer.pt-extra{
+    padding:12rem 0 0 0 ;
+}

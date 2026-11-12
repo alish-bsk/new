@@ -1,0 +1,42 @@
+.si-one {
+    background-color: #a9b5f77f; 
+    margin-top: 140px;
+    margin-left: 70px;
+    
+    position: absolute;
+    width: 1046px;
+    height: 946px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 50PX;
+
+}
+.si-tw {
+    position: absolute;
+    background-color: #f5fc3a4f; 
+    margin-top: 39px;
+    margin-left: 150px;
+    border-radius: 50PX;
+    
+    width: 751px;
+    height: 866px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+}
+
+.si-img{
+    position: absolute;
+    width: 323px;
+    height: 341px;
+    border-radius: 20%;
+    margin:70px 0px 0px 213px ;
+    opacity: 0.5;
+
+
+}
+.si-form{
+    position: absolute;
+
+    margin:495px 0px 0px 235px ;
+
+}
+

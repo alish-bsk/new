@@ -1,0 +1,52 @@
+.bdy-bck{
+    background-color: rgba(134, 134, 249, 0.274);
+
+}
+.log-one {
+    background-color: #5a72fa; 
+    color: #333;
+    margin-top: 140px;
+    margin-left: 20px;
+    position: sticky;
+    width: 850px;
+    height: 828px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.log-tw {
+    position: absolute;
+    background-color: #f3f4f9; 
+    margin-top: 0.1px;
+    margin-left: 460px;
+    border-radius: 50PX;
+    width: 685px;
+    height: 828px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: -1; 
+
+}
+.login-img{
+    position: absolute;
+    transform: scaleX(-1);
+    width: 662px;
+    height: 372px;
+    padding-top:225px ;
+    padding-left: 20px;
+    box-shadow: 20px 0px 50px rgb(255, 255, 255);
+    
+
+}
+.log-form{
+    position: absolute;
+    margin-top:225px;
+    margin-left: 370px;
+    line-height: 85px;
+
+
+}
+.log-h1{
+    position: absolute;
+    margin-top:120px;
+    margin-left: 381px;
+    font-size:50px;
+}

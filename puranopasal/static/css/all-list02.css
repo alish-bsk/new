@@ -1,0 +1,48 @@
+.user-list {
+    display: flex;              /* Enable flexbox for layout */
+    flex-wrap: wrap;           /* Allow items to wrap to the next line */
+    justify-content: flex-start; /* Align items to the start */
+    gap: 65px;                 /* Space between items */
+    padding-top: 80px;             /* Padding around the list */
+    padding-left: 270px;             /* Padding around the list */
+
+}
+
+
+.user-bor {
+    width: calc(29.33% - 20px); /* Set width to one-third of the container minus gap */
+    max-width: 320px;          /* Optional: Maximum width for larger screens */
+    height: 250px;             /* Fixed height for each item */
+    border: 1px solid rgb(192, 189, 189);
+    padding-top: 10px;  
+    padding-left: 0px;  
+
+    box-sizing: border-box;    /* Include padding and border in the width/height */
+    display: flex;             /* Use flexbox for content alignment */
+    flex-direction: column;    /* Arrange content vertically within each item */
+    align-items: center;       /* Center items horizontally */
+}
+.user-bor:hover {
+  transform: scale(1.05);
+  background-color:rgba(241, 234, 143, 0.947);
+}
+
+
+.user-modenam {
+    margin-top: 10px;          /* Space above model name */
+    font-size: 17px;           /* Adjust font size */
+    text-align: center;        /* Center align text */
+}
+
+.user-prc {
+    margin-top: 5px;           /* Space above price */
+    font-size: 17px;           /* Adjust font size */
+    color: #4d4d4d;            /* Price color */
+}
+
+.user-image {
+    width: 240px;               /* Full width of the container */
+    height:150px;              /* Maintain aspect ratio */
+    margin-bottom: 10px;       /* Space below the image */
+    border: 1px solid rgb(192, 189, 189); /* Border for the image */
+}

@@ -1,0 +1,334 @@
+
+
+.popup{
+    background-color:rgb(230, 229, 229);
+    border:.1rem solid rgb(255, 166, 77);
+    transform: translate(-50%,-50%)scale(1);
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+}
+.open-popup{
+    visibility: visible;
+    transform: translate(-50%,-50%)scale(1);
+    z-index:100; /* Above the overlay */
+    background-color: white;
+    padding: 20px;
+    border:.1rem solid rgb(255, 166, 77);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+
+
+}
+.open-popup.w-extra.h-extra{
+    height:45rem;
+    width: 25rem;
+
+}
+.open-popup.ms-extra.mt-extra{
+    margin-top: -185%;
+    margin-left: 5%;
+
+}
+
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    backdrop-filter: blur(9px); /* Background blur effect */
+    display: none; 
+}
+
+
+
+.profileedt_btn{
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+
+    transition: transform 0.3s ease;
+
+
+}
+.profileedt_btn.mt-extra.ms-extra{
+    margin-left: 3rem;
+    margin-top:2rem;
+
+
+}
+.profileedt_btn.w-extra.h-extra{
+    width: 15rem;
+    height: 2rem;
+
+}
+
+
+
+.profileedt_btn:hover {
+  transform: scale(1.1);
+}
+
+
+
+
+.profilecnl_btn{
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+
+    transition: transform 0.3s ease;
+
+
+}
+.profilecnl_btn.mt-extra.ms-extra{
+    margin-left: 3.7rem;
+    margin-top:2rem;
+
+
+}
+.profilecnl_btn.w-extra.h-extra{
+    width: 15rem;
+    height: 2rem;
+
+}
+
+
+
+.profilecnl_btn:hover {
+  transform: scale(1.1);
+}
+
+
+.divpopup{
+    height:735px;
+    width: 200px;
+    background-color:rgb(253, 249, 249);
+    transform: translate(-50%,-50%)scale(1);
+    visibility: visible;
+margin-top: 450px;
+margin-left: 550px;
+
+}
+.open-divpopup{
+    visibility: visible;
+    top:37%;
+    transform: translate(-50%,-50%)scale(1);
+
+}
+.dividnum_inpt{
+    position: absolute;
+    top: 0px;
+    left: 100px;
+    transform: translate(-50%,-50%)scale(0.5);
+    visibility: hidden;
+
+}
+.open-dividnum{
+    visibility: visible;
+    top:19px;
+    transform: translate(-50%,-50%)scale(1);
+
+}
+
+
+.div_inpt{
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 15px;
+    display: flex;               
+    flex-direction: column;
+    gap: 270px;                  
+    
+}
+.div_img{
+    margin-left: 10px;
+    margin-top:15px;
+    width: 180px;
+    height: 28px;
+    background-color: orange;  
+
+}
+.div_p{
+    margin-left: 10px;
+    margin-top:-2px;
+    width: 180px;
+    height: 28px;
+    background-color: orange;  
+
+}
+.div_btn{
+    position: absolute;
+    margin-left: 10px;
+    margin-top:130px;
+    width:50px;
+    height: 28px;
+    background-color: orange;  
+transition: transform 0.3s ease;
+}
+
+.div_btn:hover {
+  transform: scale(1.1);
+}
+.divedt_btn{
+    position: absolute;
+    margin-left: 75px;
+    margin-top:129px;
+    width:50px;
+    height: 28px;
+    background-color: orange;
+  
+
+transition: transform 0.3s ease;
+}
+
+.divedt_btn:hover {
+  transform: scale(1.1);
+}
+.opendivedt_btn{
+    position: absolute;
+    margin-left: 75px;
+    margin-top:-20px;
+    width:50px;
+    height: 28px;
+    background-color: orange;
+    transform: translate(-50%,-50%)scale(0.5);
+    visibility: hidden;
+  
+
+}
+.divcan_btn{
+    position: absolute;
+    margin-left: 140px;
+    margin-top:-20px;
+    width:50px;
+    height: 28px;
+    background-color: orange;  
+}
+
+.div_neg{
+    position: absolute;
+    font-size: 15px;
+    margin-top: 285px;
+    margin-left: 15px;
+}
+
+.div_sel{
+    position: absolute;
+    margin-top: 288px;
+    margin-left: 125px;
+    font-size: 10px;
+
+
+}
+.div_dev{
+    position: absolute;
+    font-size: 15px;
+    margin-top: 265px;
+    margin-left: 15px;
+}
+
+.div_devsel{
+    position: absolute;
+    margin-top: 268px;
+    margin-left: 125px;
+    font-size: 10px;
+
+}
+.div_cate{
+    position: absolute;
+    font-size: 15px;
+    margin-top: 10px;
+    margin-left: 15px;
+
+}
+.div_catesel{
+    position: absolute;
+    margin-top: 13px;
+    margin-left: 100px;
+    font-size: 10px;
+
+}
+.divsld_inpt{
+    position: absolute;
+    margin-top: 55px;
+    margin-left: 15px;
+
+}
+.div_des{
+    position: absolute;
+    margin-left: 10px;
+    margin-top:25px;
+    width: 180px;
+    height: 85px;
+
+
+}
+.divsld_lb{
+    position: absolute;
+    margin-top: 65px;
+    margin-left: 15px;
+    font-size: 20px;
+
+}
+.divsld_lbclr{
+    position: absolute;
+    height:19px;
+    width: 168px;
+    background-color:rgb(244, 185, 6);
+    margin-top: 15px;
+    margin-left: 1px;
+    font-size:15px;
+    padding-left: 30px;
+
+
+}
+.divsld_sel{
+    position: absolute;
+    margin-top: 69px;
+    margin-left: 65px;
+    font-size: 10px;
+}
+.divsld_btn{
+    position: absolute;
+    margin-top:110px;
+    margin-left: 15px;
+    background-color: orange;
+
+transition: transform 0.3s ease;
+}
+
+.divsld_btn:hover {
+  transform: scale(1.1);
+}
+.divsldcn_btn{
+    position: absolute;
+    margin-top: 75px;
+    margin-left: 140px;
+    background-color: orange;
+
+}
+.divdlsl_btn{
+    position: absolute;
+    margin-top: 110px;
+    margin-left: 65px;
+    background-color: orange;
+
+transition: transform 0.3s ease;
+}
+
+.divdlsl_btn:hover {
+  transform: scale(1.1);
+}
+.div-p{
+    position: absolute;
+    margin-top: -2px;
+    margin-left: 25px;
+    font-size: 20px;
+    color:red;
+}
+.div-dlsl{
+    position: absolute;
+    margin-top: 140px;
+    margin-left: 10px;
+    color:red;
+    white-space: nowrap;
+    font-size: 20px;
+}

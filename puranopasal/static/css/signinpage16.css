@@ -1,0 +1,523 @@
+
+.bdy-prfuser{
+
+}
+.bdy-prfuser.h-extra.w-extra{
+    height:115rem;
+    width:70rem;
+
+}
+.name_siginpage{
+    position: absolute;
+    margin-top:-60px;
+    margin-left:1060px;
+    color:rgb(248, 247, 247);
+    font-size: 20px;
+
+
+}
+.name_siginpage:hover{
+    color: rgb(253, 216, 4);
+}
+
+.name_logout{
+    position: absolute;
+    margin-top:-59px;
+    margin-left:1250px;
+    color:rgb(10, 9, 9);
+    background-color: rgb(250, 206, 8);
+    font-size: 20px;
+
+}
+
+.acct-one {
+    background-color: #bebebe; 
+    color: #333;
+    box-shadow: 10px 2px 21px rgba(0, 0, 0, 8);
+
+}
+.acct-one.mt-extra.ms-extra{
+    margin-top:10rem
+
+}
+
+.acct-one.w-extra.h-extra{
+    width:65rem;
+    height:25rem;
+}
+
+.img-prf.pt-extra.ps-extra{
+    padding: 2.5rem 0 0 0;
+}
+
+
+
+
+.user-prfimage.mt-extra.ms-extra.w-extra.h-extra{
+    margin-top: -0.01rem;
+    margin-left: -1rem;
+    width: 25rem;
+    height: 18.75rem;    
+
+}
+.user-image.mt-extra.ms-extra.w-extra.h-extra{
+    margin-top: -0.01rem;
+    margin-left: -1rem;
+    width: 25rem;
+    height: 18.75rem;
+}
+.acct-wrd.mt-extra.ms-extra{
+    margin-top:-19.8rem;
+    margin-left:30rem;
+    font-size: 25px;
+    z-index: 100;
+
+
+}
+.btn.btn-edit {
+  background-color: rgb(255, 162, 0);
+  font-size: 25px;
+  transition: transform 0.3s ease;
+  box-shadow: .5rem .4rem .5rem 0 rgba(0, 0, 0, 0.3);
+  border:.2rem solid black;
+
+}
+.btn.btn-edit.mt-extra.ms-extra.w-extra.h-extra.pb-extra{
+  width: 181rem;
+  height: 750rem;
+
+  margin-top: 10rem;
+  margin-left: 2rem;
+
+
+}
+
+.btn.btn-edit.w-extra.h-extra {
+  width: 12rem;
+  height: 3rem;
+}
+
+
+
+.btn.btn-edit:hover {
+   background-color: rgb(255, 162, 0);
+  border:.2rem solid black;
+
+  transform: scale(1.1);
+}
+.user-ads{
+    background-color: #bebebe; 
+    color: #333;
+    box-shadow: 10px 5px 21px rgba(0, 0, 0, 10);
+
+}
+
+.user-ads.ms-extra.mt-extra{
+    margin-top:20rem;
+    margin-left:-33.7rem;
+
+}
+
+.user-ads.w-extra.h-extra{
+    width: 70rem;
+    height: 12rem;
+
+}
+
+.acher-ads{
+position: sticky;
+gap:17rem;
+}
+
+.btn-adsgrp{
+
+gap:13rem;
+margin:-3.1rem 0 0 25rem;
+
+
+
+}
+.btn-ads{
+        box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.3);
+border:.2rem solid black;
+border-radius:.5rem;
+
+}
+.btn-ads:hover{
+    border:.2rem solid black;
+
+      transform: scale(1.1);
+border-radius:.5rem;
+
+}
+
+
+.btn.btn-adsprdt{
+margin-top:1rem;
+margin-left:3rem;    
+border:.2rem solid black;
+border-radius:.5rem;
+
+
+}
+
+.btn.btn-adsprdt:hover{
+border:.2rem solid black;
+transform: scale(1.1);
+border-radius:.5rem;
+
+}
+
+.acct-btnone{
+    position: absolute;
+    margin-top:-1105px;
+    margin-left:210px;    
+    
+    background-color: rgb(255, 162, 0);
+    width: 181px;
+    height:40px;
+    font-size:25px;
+ 
+transition: transform 0.3s ease;
+}
+
+.acct-btnone:hover {
+  transform: scale(1.1);
+}
+.acct-btntw{
+    position: absolute;
+    margin-top:-1105px;
+    margin-left:495px;
+    
+    background-color: rgb(255, 162, 0);
+    width: 181px;
+    height:40px;
+    font-size:25px;
+ 
+
+transition: transform 0.3s ease;
+}
+
+.acct-btntw:hover {
+  transform: scale(1.1);
+}
+.acct-btnthre{
+    position: absolute;
+    margin-top:-1105px;
+    margin-left:775px;
+    
+    background-color: rgb(255, 162, 0);
+    width: 181px;
+    height:40px;
+    font-size:25px;
+ 
+transition: transform 0.3s ease;
+}
+
+.acct-btnthre:hover {
+  transform: scale(1.1);
+}
+.acct-btnfur{
+    position: absolute;
+    margin-top:-1105px;
+    margin-left:1050px;    
+    
+    background-color: rgb(255, 162, 0);
+    width: 181px;
+    height:40px;
+    font-size:25px;
+ 
+transition: transform 0.3s ease;
+}
+
+.acct-btnfur:hover {
+  transform: scale(1.1);
+}
+
+.user-alllist {
+    display: flex;              /* Enable flexbox for layout */
+    flex-wrap: wrap;           /* Allow items to wrap to the next line */
+    justify-content: flex-start; /* Align items to the start */
+    gap: 50px;                 /* Space between items */
+    padding-top: 110px;             /* Padding around the list */
+    padding-left: 60px;
+    visibility: visible;
+}
+
+.openuser-alllist {
+    visibility: visible;
+}
+.user-sldlist {
+    display: flex;              /* Enable flexbox for layout */
+    flex-wrap: wrap;           /* Allow items to wrap to the next line */
+    justify-content: flex-start; /* Align items to the start */
+    gap: 50px;                 /* Space between items */
+    padding-top: 110px;             /* Padding around the list */
+    padding-left: 60px;
+    visibility: visible;
+}
+
+.openuser-sldlist {
+    visibility: visible;
+}
+
+.user-exdtlist {
+    display: flex;              /* Enable flexbox for layout */
+    flex-wrap: wrap;           /* Allow items to wrap to the next line */
+    justify-content: flex-start; /* Align items to the start */
+    gap: 50px;                 /* Space between items */
+    padding-top: 110px;             /* Padding around the list */
+    padding-left: 60px;
+    visibility: visible;
+}
+
+.openuser-exdtlist {
+    visibility: visible;
+}
+
+
+.user-allbor {
+    width: calc(29.33% - 20px); /* Set width to one-third of the container minus gap */
+    max-width: 320px;          /* Optional: Maximum width for larger screens */
+    height: 250px;             /* Fixed height for each item */
+    border: 1px solid rgb(14, 14, 14);
+    padding-top: -10px;  
+    padding-left: 0px;  
+    box-sizing: border-box;    /* Include padding and border in the width/height */
+    display: flex;             /* Use flexbox for content alignment */
+    flex-direction: column;    /* Arrange content vertically within each item */
+    align-items: center;       /* Center items horizontally */
+}
+.user-allbor:hover {
+  transform: scale(1.05);
+  background-color:rgba(241, 234, 143, 0.947);
+}
+
+.user-allmodenam {
+    margin-top: -5px;          /* Space above model name */
+    font-size: 17px;           /* Adjust font size */
+    text-align: center; 
+    color: #4d4d4d;            /* Price color */
+}
+
+.user-allprc {
+    margin-top: 5px;           /* Space above price */
+    font-size: 17px;           /* Adjust font size */
+    color: #4d4d4d;            /* Price color */
+}
+
+.user-allimage {
+    margin-top: 10px;
+    margin-bottom: 10px;       /* Space below the image */
+    border: 1px solid rgb(192, 189, 189); /* Border for the image */
+    width: 260px;               /* Full width of the container */
+    height:150px;              /* Maintain aspect ratio */
+
+}
+.user-allid {
+    margin-top: -13px;           /* Space above price */
+    font-size: 17px;           /* Adjust font size */
+    color: #4d4d4d;            /* Price color */
+}
+
+
+.div-pone{
+    color:rgb(254, 7, 7);
+    font-size: 15px;
+    margin-left: 10px;
+    margin-top:165px;
+}
+
+/* user list product signinpage*/
+.user-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 30px;
+    margin-left: 70px;
+    margin-top: 110px;
+}
+
+.user-bor {
+    background: var(--card-bg);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    max-height: 250px;
+}
+
+.user-bor:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Image wrapper */
+.user-image {
+    overflow: hidden;
+    max-width: 80%;
+    max-height: 50%;
+    object-fit: contain;
+    transition: var(--transition);
+    margin:10px auto;
+}
+
+.user-bor:hover .user-image {
+    transform: scale(1.05);
+}
+
+/* Info section */
+.user-modenam {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem 0;
+    text-align: center;
+    color: var(--text-primary);
+}
+
+.user-prc {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--accent-orange);
+    margin: 1px;
+    text-align: center;
+}
+.user-id {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--black);
+    margin: 1px;
+    text-align: center;
+}
+
+
+
+
+
+/*.open-divpopup{
+    visibility: visible;
+    top:37%;
+    transform: translate(-50%,-50%)scale(1);
+
+}*/
+
+.prdt-list{
+position: absolute;
+    background:rgb(253, 249, 249);
+    width:25rem;
+    border:.1rem solid orange;
+    border-radius:.5rem;
+    box-shadow: 2px 15px 10px rgba(0, 0, 0, 0.3);
+    margin-top: -130rem;
+
+    z-index:100;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+    transform: translate(-50%,-50%)scale(0.5);
+
+}
+
+
+.prdt-list-opne-popup{
+    position: absolute;
+
+    background:rgb(253, 249, 249);
+    width:25rem;
+    border:.1rem solid orange;
+    border-radius:.5rem;
+    box-shadow: 2px 15px 10px rgba(0, 0, 0, 0.3);
+    margin-top: -40rem;
+
+    margin-left:5rem;
+    z-index:99;
+    visibility: visible;
+    transition: transform 0.4s, top 0.4s;
+    transform: translate(-50%,-50%)scale(1);
+
+
+}
+
+
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    backdrop-filter: blur(9px); /* Background blur effect */
+    display: none; 
+}
+
+
+
+.dividnum_inpt{
+    visibility: hidden;
+
+}
+.open-dividnum{
+    visibility: visible;
+
+}
+
+
+
+.btn.div_btn{
+background-color: orange;  
+transition: transform 0.3s ease;
+border:.2rem solid black;
+width:15rem;
+margin-left:4.6rem;
+margin-top:3rem;
+}
+
+.btn.div_btn:hover {
+  border:.2rem solid black;
+
+  background-color: orange;  
+
+  transform: scale(1.1);
+}
+
+
+.user-contcard.mt-extra.ms-extra{
+    margin:-2rem 0 0 0;
+
+
+
+}
+
+.product_listprdt{
+    margin-left:-32rem;
+    height:5%;
+    margin-top:-6rem;
+}
+
+
+.userads-prdt{
+    background-color: #bebebe; 
+    box-shadow: 10px 5px 21px rgba(0, 0, 0, 10);
+
+    overflow-y: scroll;
+
+}
+.userads-prdt.ms-extra.mt-extra.w-extra.h-extra{
+    margin-top: .5rem;
+    margin-left:-33.8rem;
+    width:100%;
+    min-width: 70rem;
+    height: 75rem;
+
+    
+
+    
+}
+
+
+
+
+

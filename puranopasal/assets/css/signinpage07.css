@@ -1,0 +1,215 @@
+.name_siginpage{
+    position: absolute;
+    margin-top:-63px;
+    margin-left:1120px;
+    color:rgb(4, 4, 4);
+    font-size: 20px;
+    font-family: 'Script MT Bold', cursive;
+
+
+}
+
+
+.name_logout{
+    position: absolute;
+    margin-top:-59px;
+    margin-left:1290px;
+    color:rgb(10, 9, 9);
+    background-color: rgb(250, 206, 8);
+    font-size: 20px;
+
+}
+
+.acct-one {
+    background-color: #bebebe; 
+    color: #333;
+    margin-top: 140px;
+    margin-left: 185px;
+    position: absolute;
+    width: 1106px;
+    height: 397px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.acct-tw {
+    background-color: #353434; 
+    margin-top: 40px;
+    margin-left: 55px;
+    position: absolute;
+    width: 400px;
+    height: 300px;
+}
+.user-image{
+    margin-top: 40px;
+    margin-left: 55px;
+    position: absolute;
+    width: 400px;
+    height: 300px;
+
+}
+.acct-wrd{
+    padding-top:45px;
+    padding-left:560px;
+    font-size: 25px;
+    position: absolute;
+
+}
+.btn-edit{
+    margin-top:10px;
+    margin-left:2px;
+    background-color: rgb(255, 162, 0);
+    width: 181px;
+    height:70px;
+    font-size:25px;
+
+}
+.acct-list{
+    background-color: #bebebe; 
+    color: #333;
+    margin-top: 150px;
+    margin-left:-558px;
+    width: 1106px;
+    height: 1162px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+}
+
+.acct-a{
+    white-space: nowrap; 
+    display: inline-block;
+    color: rgb(12, 12, 12);
+    font-size: 20px;
+    padding: 10px 134px;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s, transform 0.3s;
+    font-size: 25px;
+    border-bottom: 2px solid #000;
+
+}
+.acct-btnone{
+    position: absolute;
+    margin-top:-1105px;
+    margin-left:-460px;    
+    
+    background-color: rgb(255, 162, 0);
+    width: 181px;
+    height:40px;
+    font-size:25px;
+ 
+}
+.acct-btntw{
+    position: absolute;
+    margin-top:-1105px;
+    margin-left:-210px;    
+    
+    background-color: rgb(255, 162, 0);
+    width: 181px;
+    height:40px;
+    font-size:25px;
+ 
+}
+.acct-btnthre{
+    position: absolute;
+    margin-top:-1105px;
+    margin-left:40px;    
+    
+    background-color: rgb(255, 162, 0);
+    width: 181px;
+    height:40px;
+    font-size:25px;
+ 
+}
+.acct-btnfur{
+    position: absolute;
+    margin-top:-1105px;
+    margin-left:285px;    
+    
+    background-color: rgb(255, 162, 0);
+    width: 181px;
+    height:40px;
+    font-size:25px;
+ 
+}
+
+
+.user-alllist {
+    display: flex;              /* Enable flexbox for layout */
+    flex-wrap: wrap;           /* Allow items to wrap to the next line */
+    justify-content: flex-start; /* Align items to the start */
+    gap: 50px;                 /* Space between items */
+    padding-top: 110px;             /* Padding around the list */
+    padding-left: 60px;
+    visibility: hidden;
+}
+
+.openuser-alllist {
+    visibility: visible;
+}
+.user-sldlist {
+    display: flex;              /* Enable flexbox for layout */
+    flex-wrap: wrap;           /* Allow items to wrap to the next line */
+    justify-content: flex-start; /* Align items to the start */
+    gap: 50px;                 /* Space between items */
+    padding-top: -4000px;             /* Padding around the list */
+    padding-left: 60px;
+    visibility: hidden;
+}
+
+.openuser-sldlist {
+    visibility: visible;
+}
+
+.user-exdtlist {
+    display: flex;              /* Enable flexbox for layout */
+    flex-wrap: wrap;           /* Allow items to wrap to the next line */
+    justify-content: flex-start; /* Align items to the start */
+    gap: 50px;                 /* Space between items */
+    padding-top: 110px;             /* Padding around the list */
+    padding-left: 60px;
+    visibility: hidden;
+}
+
+.openuser-exdtlist {
+    visibility: visible;
+}
+
+
+.user-allbor {
+    width: calc(29.33% - 20px); /* Set width to one-third of the container minus gap */
+    max-width: 320px;          /* Optional: Maximum width for larger screens */
+    height: 250px;             /* Fixed height for each item */
+    border: 1px solid rgb(14, 14, 14);
+    padding-top: -10px;  
+    padding-left: 0px;  
+    box-sizing: border-box;    /* Include padding and border in the width/height */
+    display: flex;             /* Use flexbox for content alignment */
+    flex-direction: column;    /* Arrange content vertically within each item */
+    align-items: center;       /* Center items horizontally */
+}
+
+.user-allmodenam {
+    margin-top: -5px;          /* Space above model name */
+    font-size: 17px;           /* Adjust font size */
+    text-align: center; 
+    color: #4d4d4d;            /* Price color */
+}
+
+.user-allprc {
+    margin-top: 5px;           /* Space above price */
+    font-size: 17px;           /* Adjust font size */
+    color: #4d4d4d;            /* Price color */
+}
+
+.user-allimage {
+    width: 265px;               /* Full width of the container */
+    height:170px;    
+    margin-bottom: 10px;       /* Space below the image */
+    border: 1px solid rgb(192, 189, 189); /* Border for the image */
+}
+.user-allid {
+    margin-top: -13px;           /* Space above price */
+    font-size: 17px;           /* Adjust font size */
+    color: #4d4d4d;            /* Price color */
+}
+
+

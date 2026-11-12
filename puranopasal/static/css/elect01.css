@@ -1,0 +1,62 @@
+.el-lists{
+  background:rgb(218, 218, 239);
+  border:.1rem solid rgb(244, 163, 33);
+  border-radius:.5rem;
+}
+.el-sidebar-header{
+  background:rgb(76, 76, 241);
+  border-radius:.5rem;
+  box-shadow: .5rem .4rem .2rem 0 rgba(0, 0, 0, 0.3);
+
+
+}
+
+.el-sidebar-header.me-extra{
+  margin-right:35rem;
+}
+
+.el-lists.w-extra{
+  width:15rem;
+}
+.el-sidebar-header.h-extra.w-extra{
+  width:12rem;
+  height:5rem;
+}
+.el-lists.mt-extra{
+  margin:10rem 0 0 0 ;
+
+}
+.list-btn{
+    box-shadow: .5rem 1rem .5rem 0 rgba(0, 0, 0, 0.3);
+      transition: border-bottom 0.3s ease ;
+
+}
+
+.list-btn:hover{
+  transform: scaleX(1.1);
+
+
+
+}
+
+.prdt-list.mt-extra.ms-extra{
+    margin:-45.5rem 0 0 8rem ;
+
+}
+
+
+.prdt-list.w-extra{
+  width:85rem;
+  overflow-x:hidden;
+
+}
+
+.prdt-all.ms-extra{
+  margin-left:12rem;
+
+}
+
+
+
+
+
