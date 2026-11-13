@@ -29,7 +29,14 @@ SECRET_KEY = 'django-insecure-woyzl&^qhec-33w^-z^xt0nxi3$!y!@)8dmi50ph=pvmm67=df
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'localhost',
+    '127.0.0.1',
+    '.onrender.com',
+]
+CORS_ALLOWED_ORIGINS = [
+    'https://alish-bsk.github.io',
+]
 
 
 # Application definition
