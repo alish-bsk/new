@@ -38,10 +38,16 @@ CORS_ALLOWED_ORIGINS = [
     'https://alish-bsk.github.io',
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://alish-bsk.github.io',
+]
+
 
 # Application definition
 
 INSTALLED_APPS = [
+        'corsheaders',
+
     'electronic.apps.ElectronicConfig',
     'signup.apps.SignupConfig',
     'signin.apps.SigninConfig',
