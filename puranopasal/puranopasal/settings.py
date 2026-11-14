@@ -29,24 +29,11 @@ SECRET_KEY = 'django-insecure-woyzl&^qhec-33w^-z^xt0nxi3$!y!@)8dmi50ph=pvmm67=df
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [
-    'localhost',
-    '127.0.0.1',
-    '.onrender.com',
-]
-CORS_ALLOWED_ORIGINS = [
-    'https://alish-bsk.github.io',
-]
-
-CSRF_TRUSTED_ORIGINS = [
-    'https://alish-bsk.github.io',
-]
 
 
 # Application definition
 
 INSTALLED_APPS = [
-        'corsheaders',
 
     'electronic.apps.ElectronicConfig',
     'signup.apps.SignupConfig',
@@ -76,7 +63,7 @@ ROOT_URLCONF = 'puranopasal.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR,'docs')],
+        'DIRS': [os.path.join(BASE_DIR,'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

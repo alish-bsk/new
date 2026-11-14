@@ -32,7 +32,7 @@ def home(request):
 
         recretrn=electview.recommend_products(request)
 
-        return render(request, "index.html", {'recodprdt': recretrn,"laptop":laptop[0:3],"mobile":mobile[0:3],"headphone":headphone[0:3]})
+        return render(request, "home02.html", {'recodprdt': recretrn,"laptop":laptop[0:3],"mobile":mobile[0:3],"headphone":headphone[0:3]})
 
     
     account = Account.objects.get(phonenumber=request.session['phonenumber'])
@@ -49,7 +49,7 @@ def home(request):
     recretrn=electview.recommend_products(request)
 
 
-    return render(request, "index.html", {'recodprdt': recretrn, 'name':account,"laptop":laptop[0:3],"mobile":mobile[0:3],"headphone":headphone[0:3]})
+    return render(request, "home02.html", {'recodprdt': recretrn, 'name':account,"laptop":laptop[0:3],"mobile":mobile[0:3],"headphone":headphone[0:3]})
 
 
 
